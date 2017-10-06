@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" method="upgrade" group="vmpayment">
+    <name>Payme</name>
+    <creationDate>May 2017</creationDate>
+    <author>richman@mail.ru</author>
+    <authorUrl>https://paycom.uz</authorUrl>
+    <copyright>payme.uz</copyright>
+    <license></license>
+    <version>0.0.1</version>
+    <description><![CDATA[Payme Checkout Plugin for Virtuemart. ]]></description>
+
+    <languages>
+        <language tag="en-GB">en-GB.vmpayment_payme.ini</language>
+        <language tag="ru-RU">ru-RU.vmpayment_payme.ini</language>
+    </languages>
+
+    <files>
+        <filename plugin="payme">payme.php</filename>
+        <filename>payme.png</filename>
+    </files>
+
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="payment" addfieldpath="/administrator/components/com_virtuemart/fields">
+                <field type="text" name="public_key" size="50" label="MERCHANT ID" default="" description="VMPAYMENT_PAYME_PUBLIC_KEY_DESC" />
+                <field type="text" name="secret_key" size="50" label="SECRET KEY" default="" description="VMPAYMENT_PAYME_SECRET_KEY_DESC" />
+            </fieldset>
+        </fields>
+    </vmconfig>
+
+</extension>
